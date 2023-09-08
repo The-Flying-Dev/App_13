@@ -10,7 +10,7 @@ class Program
             "For a Rectangle press 'r', for a Triangle press 't' and for a Circle press 'c'"
         );
 
-        string choice = Console.ReadLine();
+        string choice = Console.ReadLine().Trim().ToLower();
 
         // Variables declared to store the inputted data
         float height;
@@ -56,7 +56,8 @@ class Program
         Console.ReadKey();
 
         // Now using Local Functions to complete the calculations
-        // Does not need to include the member access modifier since all Local Functions are Private, doing so will result in an error
+        // Does not need to include the member access modifier
+        // since all Local Functions are Private doing so will result in an error
         float Rectangle()
         {
             Console.WriteLine("Please enter the height of the rectangle.");
@@ -91,6 +92,8 @@ class Program
 
             result = (float)Math.PI * (radius * radius);
             return result;
+            //float resultRounded = MathF.Round(result, 2, MidpointRounding.ToEven);
+            //return resultRounded;
         }
     }
 }
