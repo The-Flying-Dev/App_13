@@ -6,15 +6,19 @@ class Program
     {
         Console.WriteLine("Welcome to the Shape Area Calculator");
         Console.WriteLine("Choose from the following shapes to get the area");
-        Console.WriteLine("For a Rectangle press 'r' and for a Circle press 'c'");
+        Console.WriteLine(
+            "For a Rectangle press 'r', for a Triangle press 't' and for a Circle press 'c'"
+        );
 
         string choice = Console.ReadLine();
 
+        // Variables declared to store the inputted data 
         float height;
         float width;
         float radius;
 
         float result;
+
 
         if (choice == "r")
         {
@@ -25,6 +29,16 @@ class Program
             width = float.Parse(Console.ReadLine());
 
             result = height * width;
+        }
+        else if (choice == "t")
+        {
+            Console.WriteLine("Please enter the height of the triangle.");
+            height = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please enter the base of the triangle.");
+            width = float.Parse(Console.ReadLine());
+
+            result = 0.5f * (height * width);
         }
         else
         {
